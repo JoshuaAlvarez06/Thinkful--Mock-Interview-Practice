@@ -23,10 +23,8 @@ export default function PostDetail({ posts }) {
         onClick={() => {
           //When clicked is true, comments will display
           setClicked(true);
-          if (post.id > 0) {
-            // On click, fetch the comments with the postId
-            fetchComments(post.id);
-          }
+          // On click, fetch the comments with the postId
+          fetchComments(post.id);
         }}
       >
         {post.body}
@@ -53,8 +51,7 @@ export default function PostDetail({ posts }) {
         <h2>
           {clicked
             ? "Comments for selected post"
-            : "Click the body of a post to see post's comments"
-          }
+            : "Click the body of a post to see post's comments"}
         </h2>
         {clicked && postComments}
       </div>
